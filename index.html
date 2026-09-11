@@ -30,7 +30,7 @@
 
         <div
           id="errorHigh"
-          class="banner flex w-112.5 items-center justify-start gap-3 rounded-xl border border-[#FCA5A5] bg-[#FEF2F2] p-4"
+          class="banner flex w-112.5 items-center justify-start gap-3 rounded-xl border border-[#FCA5A5] bg-[#FEF2F2] p-4 ml-3"
           hidden
         >
           <i class="ti ti-circle-arrow-up text-[20px] text-[#991B1B]"></i>
@@ -41,7 +41,7 @@
 
         <div
           id="errorLow"
-          class="banner flex w-112.5 items-center justify-start gap-3 rounded-xl border border-[#FCA5A5] bg-[#FEF2F2] p-4"
+          class="banner flex w-112.5 items-center justify-start gap-3 rounded-xl border border-[#FCA5A5] bg-[#FEF2F2] p-4 ml-3"
           hidden
         >
           <i class="ti ti-circle-arrow-down text-[20px] text-[#991B1B]"></i>
@@ -52,7 +52,7 @@
 
         <div
           id="successBanner"
-          class="banner flex w-112.5 items-center justify-start gap-3 rounded-xl border border-green-300 bg-green-200 p-4"
+          class="banner flex w-112.5 items-center justify-start gap-3 rounded-xl border border-green-300 bg-green-200 p-4 ml-3"
           hidden
         >
           <i class="ti ti-circle-check text-[20px] text-green-700"></i>
@@ -63,7 +63,7 @@
 
         <div
           id="errorNaN"
-          class="banner flex w-112.5 items-center justify-start gap-3 rounded-xl border border-[#FCA5A5] bg-[#FEF2F2] p-4 ml-3banner "
+          class="banner flex w-112.5 items-center justify-start gap-3 rounded-xl border border-[#FCA5A5] bg-[#FEF2F2] p-4 ml-3"
           hidden
         >
           <i class="ti ti-circle-x text-[20px] text-[#991B1B]"></i>
@@ -76,14 +76,14 @@
             Your Guess
           </h3>
           <input
-            type="number"
             id="guessInput"
             class="w-full rounded-xl border-2 border-[#E2E8F0] bg-[#F8FAFC] p-4 text-[15px] text-[#0F172A] caret-[#4F46E5] transition-colors duration-300 focus:border-[#4F46E5] focus:outline-none"
             placeholder="Enter your guess"
           />
           <button
+            onclick="submit()"
             id="submitBtn"
-            class="h-13 w-full cursor-pointer rounded-xl bg-indigo-600 font-semibold text-white"
+            class="h-13 w-full cursor-pointer rounded-xl bg-indigo-600 font-semibold text-white shadow-[0px_4px_8px_rgba(79,70,229,0.14902)]"
           >
             Submit Guess
           </button>

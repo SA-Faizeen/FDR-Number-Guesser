@@ -3,7 +3,6 @@ let errorLow = document.getElementById("errorLow");
 let errorNaN = document.getElementById("errorNaN");
 let successBanner = document.getElementById("successBanner");
 let guessInput = document.getElementById("guessInput");
-let submitBtn = document.getElementById("submitBtn");
 let resetBtn = document.getElementById("resetBtn");
 let bannerTimeout = 3000;
 let secretNum = Math.floor(Math.random() * 100) + 1;
@@ -26,10 +25,15 @@ function invalidNum() {
 
 function success() {
   successBanner.hidden = false;
-  setTimeout(() => { successBanner.hidden = true; }, bannerTimeout);
 }
 
-submitBtn.addEventListener("click", () => {
+guessInput.addEventListener("keydown", (event) => {
+  if (event.key === "Enter") {
+    submit();
+  }
+});
+
+function submit() {
   let userGuess = Number(guessInput.value);
   if (!guessInput.value || isNaN(userGuess) || userGuess < 1 || userGuess > 100) {
     invalidNum();
@@ -42,9 +46,9 @@ submitBtn.addEventListener("click", () => {
   } else {
     success();
   }
-});
+}
 
 resetBtn.addEventListener("click", () => {
-	location.reload()
 	guessInput.value = ""
+	location.reload()
 })
